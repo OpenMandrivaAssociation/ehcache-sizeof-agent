@@ -1,4 +1,4 @@
-%_javapackages_macros
+%{?_javapackages_macros:%_javapackages_macros}
 Name:          ehcache-sizeof-agent
 Version:       1.0.1
 Release:       6.0%{?dist}
@@ -54,3 +54,25 @@ sed -i 's/\r//' LICENSE.txt
 
 %files javadoc -f .mfiles-javadoc
 %doc LICENSE.txt
+
+%changelog
+* Thu Aug 08 2013 gil cattaneo <puntogil@libero.it> 1.0.1-6
+- fix rhbz#992185
+- install license file
+- switch to XMvn
+- minor changes to adapt to current guideline
+
+* Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.0.1-5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
+* Fri Feb 22 2013 Andy Grimm <agrimm@gmail.com> - 1.0.1-4
+- Add maven-local and maven-shared to BuildRequires (RHBZ#913968)
+
+* Wed Feb 13 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.0.1-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
+
+* Wed Jul 18 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.0.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
+
+* Tue Jan 17 2012 David Nalley <david@gnsa.us> - 1.0.1-1
+- Initial rpm build
